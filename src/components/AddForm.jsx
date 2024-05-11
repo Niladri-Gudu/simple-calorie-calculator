@@ -93,7 +93,7 @@ const AddForm = () => {
 
   return (
     <div>
-      <h1 className="text-5xl font-semibold text-center mt-8 mb-4">Simple Calorie Counter</h1>
+      <h1 className="text-5xl font-semibold text-center mt-8 mb-4">Simple Calorie Calculator</h1>
       {
         edit ? (
           <form>
