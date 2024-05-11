@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-const ItemCard = ( { title, protein, fats, carbs, calorie } ) => {
+const ItemCard = ( { index, title, protein, deleteItem, fats, carbs, calorie, editItem } ) => {
   return (
     <div className="border-2 rounded-xl border-blue-500 p-5 w-[200px] flex flex-col gap-3">
         <h1 className="font-semibold text-xl">{title}</h1>
@@ -16,8 +16,8 @@ const ItemCard = ( { title, protein, fats, carbs, calorie } ) => {
             <button className="text-2xl bg-red-500 px-4 py-1 rounded-xl text-white  ">-</button>
         </div> */}
         <div className="flex justify-between ">
-            <button className="text-lg bg-green-500 px-4 py-1 rounded-xl text-white  ">Edit</button>
-            <button className="text-lg bg-red-500 px-4 py-1 rounded-xl text-white  ">Delete</button>
+            <button onClick={() => editItem(index)} className="text-lg bg-green-500 px-4 py-1 rounded-xl text-white">Edit</button>
+            <button onClick={() => deleteItem(index)} className="text-lg bg-red-500 px-4 py-1 rounded-xl text-white  ">Delete</button>
         </div>
     </div>
   )
